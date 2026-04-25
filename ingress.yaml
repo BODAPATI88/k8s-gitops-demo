@@ -11,8 +11,8 @@ spec:
       paths:
       - path: /
         pathType: Prefix
-        backend:
-          service:
-            name: demo-app   # make sure this matches your service
-            port:
-              number: 80
+       backend:
+  service:
+    name: demo-service   # FIX: match actual service
+    port:
+      number: 80
