@@ -6,13 +6,13 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: demo.bvrinfra.in   # <-- FIX THIS
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-       backend:
-  service:
-    name: demo-service   # FIX: match actual service
-    port:
-      number: 80
+    - host: demo.bvrinfra.in
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: demo-service
+                port:
+                  number: 80
